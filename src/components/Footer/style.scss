@@ -1,0 +1,69 @@
+@import "../../styles/base.scss";
+@import "../../styles/responsive-mixins";
+
+.buttons {
+    margin-top: 20px;
+    &-content{
+        width: 95%;
+        display:flex; 
+        align-items:center; 
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &.justify-space{
+            justify-content:space-between;
+        }
+
+        &.justify-end{
+            justify-content:flex-end;
+        }
+        
+        @include tablet {
+            width: 85%;
+        }
+
+        > {
+            button {
+                padding: 10px 20px; 
+                font-weight: bold;
+                border: none;
+
+                &:disabled {
+                    background: $terciary-color;
+                }
+            }
+    
+            .previous {
+                background: transparent;
+                color: $secondary_color;
+            }
+    
+            .previous:hover {
+                background: $terciary-color;
+                color: $white;
+            }
+            .next {
+                color: white;
+                background: $secondary_color;
+            }
+            
+            .last {
+                color: $primary_color;
+                background: transparent;
+            }
+
+            .hide {
+                display: none;
+            }
+        }
+    }
+
+    > hr {
+        height: 1px;
+        background-color: #E6EAEB;
+        border: none;
+    }
+        
+    
+}

@@ -1,0 +1,17 @@
+@import "../../styles/base";
+@import "../../styles/responsive-mixins.scss";
+
+#step3 {
+    color: $secondary_color;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.loading {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}

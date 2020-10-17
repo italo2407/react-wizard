@@ -1,0 +1,23 @@
+@import "../../styles/base";
+@import "../../styles/responsive-mixins";
+
+#title {
+    h1 {
+        color: $secondary_color;
+        font-size: 1.5rem;
+
+        @include mobile-small {
+            font-size: 1.3rem;
+        }
+    }
+
+    hr {
+        background-color: #07d7e6;
+        border: none;
+        height: 3px;
+        margin-left: 0;
+        margin-top: -5px;
+        width: 10%;
+    }
+}
+

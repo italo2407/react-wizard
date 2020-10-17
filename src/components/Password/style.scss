@@ -1,0 +1,84 @@
+@import "../../styles/base.scss";
+@import "../../styles/responsive-mixins";
+
+$red: #F44336;
+$yellow: #FFEB3B;
+$green: #4CAF50;
+
+.password{
+    display: block;
+    position: relative;
+    font-weight: 700;
+    width: 100%;
+    color: $secondary_color;
+    
+    &-input{
+      display: block;
+      text-transform: none;
+      width: 90%;
+      height: 42px;
+      border: 1px solid $terciary_color;
+      font-weight: 400;
+      color: $secondary-color;
+      padding-left: 10px;
+      margin-top: 15px;
+
+      &::placeholder {
+        color: $terciary_color;
+        font-family: 'Quicksand', sans-serif;
+      }
+    }
+    
+    &-eye{
+      cursor: pointer;
+      position: absolute;
+      bottom: 15px;
+      height: 16px; 
+      right: 10%;
+      color: $secondary-color;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    &-strength{
+      position: absolute;
+      width: 0%;
+      height: 4px;
+      bottom: -8px;
+      left: 0;
+      background: transparent;
+      transition: all 300ms ease-in-out;
+      
+      &[data-score="null"]{
+        width: 0;
+        background: $red;
+      }
+      
+      &[data-score="0"]{
+        width: 5%;
+        background: $red;
+      }
+      &[data-score="1"]{
+        width: 25%;
+        background: $red;
+      }
+      &[data-score="2"]{
+        width: 50%;
+        background: $yellow;
+      }
+      &[data-score="3"]{
+        width: 70%;
+        background: $green;
+      }
+      &[data-score="4"]{
+        width: 90%;
+        background: $green;
+      }
+    }
+  }
+
+  .validation-message {
+    color: $red;
+    font-size: 0.5rem;
+    font-weight: 400;
+  }

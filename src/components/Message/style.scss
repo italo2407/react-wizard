@@ -1,0 +1,44 @@
+@import "../../styles/base.scss";
+@import "../../styles/responsive-mixins";
+
+.result {
+    text-align: center;
+    /*@include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*margin:auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 200px;*/
+    .icon {
+        font-size: 3rem;
+        margin-right: 15px;
+        vertical-align: middle;
+
+        &-success {
+            color:#40CAA4;
+        }
+
+        &-failed {
+            color: $primary_color;
+        }
+    }
+
+    .message {
+        > {
+            h1 {
+               margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+}
